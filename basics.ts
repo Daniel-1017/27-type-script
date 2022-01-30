@@ -46,3 +46,16 @@ function printOutput(value: any) {
   // This function doesn't return anything so it has a special return type named void, it means that this function never returns (undefined or null)
   console.log(value);
 }
+
+// Generics
+function insertAtBeginning<T>(array: T[], value: T) {
+  const newArray = [value, ...array];
+  return newArray;
+}
+
+let demoArray = [1, 2, 3];
+
+let updatedArray = insertAtBeginning(demoArray, -1); // [-1, 1, 2, 3];
+let stringArray = insertAtBeginning(["a", "b", "c", "d"], "e");
+
+// It simply helps you write functions, in this case, which are type safe yet flexible. They are flexible. They work with any type, but then once a certain type is used for that function, execution,that type is locked in and known.
