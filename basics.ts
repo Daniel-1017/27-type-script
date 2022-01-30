@@ -16,22 +16,22 @@ let hobbies: string[];
 
 hobbies = ["Sports", "Cooking"];
 
-let person: {
+// Type alias
+type Person = {
   name: string;
   age: number;
-};
+}; // We can assign new names to avoid duplication
+
+let person: Person;
 
 person = {
   name: "Daniel",
   age: 16,
 };
 
-let people: {
-  name: string;
-  age: number;
-}[];
+let people: Person[];
 
 // Union type
 let course: string | number = "React - The Complete Guide";
 
-course = 1190;
+course = 1190; // Now we can specify more types of value (string and number)
