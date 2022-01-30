@@ -31,8 +31,7 @@ let people: {
   age: number;
 }[];
 
-// Type inference
+// Union type
+let course: string | number = "React - The Complete Guide";
 
-let course = "React - The Complete Guide"; // yes
-
-// If we assign a value to a variable, typescript will understand which type of value we assign so we don't have to specify
+course = 1190;
