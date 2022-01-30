@@ -35,3 +35,14 @@ let people: Person[];
 let course: string | number = "React - The Complete Guide";
 
 course = 1190; // Now we can specify more types of value (string and number)
+
+// Functions and Types
+function add(a: number, b: number): number {
+  // We can set the return type
+  return a + b;
+}
+
+function printOutput(value: any) {
+  // This function doesn't return anything so it has a special return type named void, it means that this function never returns (undefined or null)
+  console.log(value);
+}
